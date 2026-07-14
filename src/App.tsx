@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { SearchArea } from './components/SearchArea';
 import { CurrentWeather } from './components/CurrentWeather';
 import { Forecast } from './components/Forecast';
-import { AIRecommendations } from './components/AIRecommendations';
 import { TemperatureChart } from './components/TemperatureChart';
 import { WeatherAlerts } from './components/WeatherAlerts';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -67,7 +66,7 @@ export default function App() {
             Weather Intelligence
           </h1>
           <p className="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">
-            Get accurate forecasts and AI-powered planning recommendations for any city.
+            Get accurate forecasts for any city.
           </p>
         </div>
 
@@ -92,7 +91,6 @@ export default function App() {
             <WeatherAlerts data={weatherData.daily} />
             <TemperatureChart data={weatherData.daily} />
             <Forecast data={weatherData.daily} />
-            <AIRecommendations location={locationName} forecast={weatherData.daily} currentWeather={weatherData.current_weather} />
           </div>
         )}
       </div>
